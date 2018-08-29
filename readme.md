@@ -45,6 +45,24 @@ Sets all pixels to the passed rgb and brightness level.
 This method is the most important. You can set pixels colours as much as you want but they
 will not update until you call this method.
 
+# Using alternative IoT.js runtime
+
+IoT.js is an alternate JavaScript runtime powered by JerryScript engine
+targeting more constrained devices.
+
+Usage:
+
+```sh
+make run/iotjs
+```
+
+rm -rf node-blinkt
+
+[![web-of-things-agriculture-20180712rzr.webm](https://s-opensource.org/wp-content/uploads/2018/07/web-of-things-agriculture-20180712rzr.gif)](https://player.vimeo.com/video/279677314#web-of-things-agriculture-20180712rzr.webm "Video Demo")
+
+[![iotjs-wiringpi](https://pbs.twimg.com/ext_tw_video_thumb/1019945702791766017/pu/img/bbbNf-HJR2FkUb5l.jpg)](https://twitter.com/TizenHelper/status/1019945989388546048# "blinkt-node")
+
+
 # Copyright and License
 All works are copyright Irrelon Software Limited. You may use this project under any open-source
 license that you wish e.g. (MIT, GPL etc).
