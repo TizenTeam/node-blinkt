@@ -2,7 +2,15 @@
 # -*- makefile -*-
 main_src ?= dist/example/fade.js
 runtime ?= iotjs
+project?=node-blinkt
 iotjs_modules_dir ?= iotjs-modules
+
+default: help start
+	@echo "# $@: $^"
+
+help:
+	@echo "Usage:"
+	@echo "# make start"
 
 run/node: ${main_src} node_modules
 	npm test
