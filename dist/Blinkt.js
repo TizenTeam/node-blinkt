@@ -172,11 +172,11 @@ Blinkt.prototype.sendUpdate = function sendUpdate() {
  */
 
 
-Blinkt.prototype._writeByte = function writeByte(byte) {
+Blinkt.prototype._writeByte = function writeByte(_byte) {
   var bit;
 
   for (var i = 0; i < this._numPixels; i++) {
-    bit = (byte & 1 << 7 - i) > 0 === true ? wpi.HIGH : wpi.LOW; // jshint ignore:line
+    bit = (_byte & 1 << 7 - i) > 0 === true ? wpi.HIGH : wpi.LOW; // jshint ignore:line
 
     wpi.digitalWrite(this._dat, bit);
     wpi.digitalWrite(this._clk, 1);
