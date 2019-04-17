@@ -7,7 +7,11 @@ default: help start
 main_src ?= dist/example/fade.js
 runtime ?= iotjs
 project?=node-blinkt
+
 iotjs_modules_dir ?= iotjs_modules
+iotjs_wiringpi_dir ?= ${iotjs_modules_dir}/iotjs-wiringpi
+iotjs_wiringpi_url ?= https://github.com/SamsungInternet/wiringpi-iotjs
+iotjs_wiringpi_revision ?= v0.0.1
 
 deploy_dir ?= ${CURDIR}/tmp/deploy
 deploy_modules_dir ?= ${deploy_dir}/iotjs_modules
@@ -32,10 +36,6 @@ run/iotjs: ${main_src} ${iotjs_modules_dir}
 	iotjs $<
 
 run: run/node run/iotjs
-
-iotjs_wiringpi_dir ?= ${iotjs_modules_dir}/iotjs-wiringpi
-iotjs_wiringpi_url ?= https://github.com/SamsungInternet/wiringpi-iotjs
-iotjs_wiringpi_revision ?= master
 
 ${iotjs_modules_dir}/wiringpi-node:
 	mkdir -p $@
