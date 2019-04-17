@@ -28,4 +28,7 @@ ${iotjs_modules_dir}: ${iotjs_modules_dir}/wiringpi-node
 node_modules: package.json
 	npm install
 
+${main_src}: package.json node_modules
+	npm run build
+
 start: run/${runtime}
